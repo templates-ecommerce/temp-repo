@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>  
+<script src="/Controllers/trackerController.js"></script>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-3 col-sm-6 mb-3">
+              
+            
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+           
+                
+                    <input type="text" class="form-control" id="trackid" aria-describedby="helpId" placeholder="Enter order id">
+           
+            
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+            <button class="btn btn-sm btn-outline-primary" onclick="track()">track</button>
+             
+            
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table" id="producttrack">
+          <thead>
+            <tr>
+              <th>Order id</th>
+              <th>Total amount</th>
+              <th>City</th>
+              <th>Status</th>
+              <th>Order date</th>
+              <th>Control</th>
+            </tr>
+          </thead>
+            <tbody id="tabrownode">
+            </tbody>
+            <tbody id="hidetable" style="display: none;">
+            
+            </tbody>
+        </table>
+        </div>
+</div>
+
+
+
+{{ end }}
