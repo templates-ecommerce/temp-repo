@@ -98,7 +98,7 @@
       <div class="col-lg-4 col-sm-6 mb-4 pricesrangeclass" data-price="{{ .Params.Price }}">
         <div class="card border-0 text-center showhidefile">
           <div class="overlay">
-            <div class="text"><a href="{{ .Permalink }}" style="color: white;"> <i class="fa fa-eye" aria-hidden="true" style="font-size: 30px;"></i></a></div>
+            <div class="text"><a href="{{ .Permalink }}" class="ahrefview" style="color: #f9fafa;">View More</a></div>
           </div>
           <a href="{{ .Permalink }}">
             
@@ -116,7 +116,7 @@
               <s>PKR <script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.PriceBefore }}')))</script></s>
               {{ end }}
               <span class="rangeprice" hidden>{{ .Params.Price }}')))</span>
-              <span class="lead text-primary">PKR <span><script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.Price }}')))</script></span></span>
+              <span class="lead text-primary">PKR <span style="font-weight: 500;"><script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.Price }}')))</script></span></span>
             </div>
             <button class="btn btn-sm btn-outline-primary" id="modalActivate" data-item-id="{{ .Params.ProductID }}"
             data-item-name="{{ .Title }}" {{ range first 1 .Params.Images }} data-item-image="{{ .image | absURL }}"
@@ -137,18 +137,65 @@
         </div>
       </div>
       {{ end }}
+  
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+
+
+<ul class="pagination" id="pagin">
+  <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
+ 
+  <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
+</ul>
+      </div>
     </div>
   </div>
 </section>
+<script>
+  	pageSize = 12;
 
+var pageCount =  $(".pricesrangeclass").length / pageSize;
+  
+   for(var i = 0 ; i<pageCount;i++){
+      
+     $("#pagin").append('<li class="page-item"><a class="page-link" href="#">'+(i+1)+'</a></li> ');
+   }
+      $("#pagin li").first().addClass("active")
+  showPage = function(page) {
+    $(".pricesrangeclass").hide();
+    $(".pricesrangeclass").each(function(n) {
+        if (n >= pageSize * (page - 1) && n < pageSize * page)
+            $(this).show();
+    });        
+}
+  
+showPage(1);
+
+$("#pagin li").click(function() {
+    $("#pagin li").removeClass("active");
+    $(this).addClass("active");
+    showPage(parseInt($(this).text())) 
+});
+</script>
 
 
 {{ end }}
 <!-- /products -->
 <style>
+  .ahrefview{
+    opacity:1;
+    background-color: transparent;
+    border: 1px solid white;
+    
+    padding: 12px 35px;
+    font-size: 15px;
+    z-index: 3;
+   
+  }
   .overlay {
     position: absolute;
-    background-color: #5182c2;
+    background-color: #2c3b70;
     top: 0;
     left: 0;
   right: 0;
@@ -158,13 +205,13 @@
     overflow: hidden;
    
     
-    transition: 1.5s ease;
+    transition: 0.5s ease;
    
    
 }
 
 .showhidefile:hover .overlay {
-    opacity: 0.8;
+    opacity: 0.85;
     height: 230px;
     /* filter: alpha(opacity=100); */
 }
@@ -180,6 +227,9 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+
+
 </style>
 
 

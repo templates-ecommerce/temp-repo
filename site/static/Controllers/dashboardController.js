@@ -29,7 +29,7 @@ function onloaderdashboard() {
     if (pagenames == "dashboard") {
       console.log(AccessKey)
       $.ajax({
-        url: apicon+'/api/ECom/GetOrders?StartDate=2021-07-01&EndDate=2021-09-30&CustomerID=' + u_id,
+        url: apicon+'/api/ECom/GetOrders?StartDate=2021-01-01&EndDate=3021-01-01&CustomerID=' + u_id,
         method: "GET",
         headers: {
           'SubDomain': subdomain,
