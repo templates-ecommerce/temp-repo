@@ -8,7 +8,15 @@ function sliderheroactive() {
             type: 'GET',
             dataType: 'json',
             success: function (response) {
-                
+                if(response.length == 0)
+                {
+                    
+                    $("#slider_main_id").remove();
+                }
+                else{
+                    $("#slider_main_id").remove();
+                    
+                }
                 $.each(response, function (index, element) {
 
                     if (index == 0) {
@@ -16,7 +24,7 @@ function sliderheroactive() {
                         imgas += '<div class="carousel-item active">' +
                             '<img class="d-block w-100" src="' + element.src + '">' +
                             '</div>';
-                        $("#slider_main_id").removeClass("d-none");
+                        
                     }
                     else {
                         

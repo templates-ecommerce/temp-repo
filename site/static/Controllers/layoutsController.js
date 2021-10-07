@@ -174,7 +174,7 @@ function socialtagsandcontant() {
             // contact allow start
             try {
                     if (social_mobile != null && social_mobile != '' && social_mobile.trim() != '') {
-                    $(".parmobile").html('<a class="text-color" href="tel:' + social_mobile + '"><i class="ti-mobile text-primary mr-2"></i>' + social_mobile + '</a>');
+                    $(".parmobile").html('<a class="text-color" href="tel:' + social_mobile + '"><i class="ti-mobile mr-2"></i>' + social_mobile + '</a>');
                     $(".parmobile").removeClass("d-none");
                 }
             } catch (error) {
@@ -182,7 +182,7 @@ function socialtagsandcontant() {
             }
             try {
                     if (social_email != null && social_email != '' && social_email.trim() != '') {
-                    $(".paremail").html('<a class="text-color" href="mailto:' + social_email + '"><i class="ti-email text-primary mr-2"></i>' + social_email + '</a>');
+                    $(".paremail").html('<a class="text-color" href="mailto:' + social_email + '"><i class="ti-email mr-2"></i>' + social_email + '</a>');
                     $(".paremail").removeClass("d-none");
                 }
             } catch (error) {
@@ -191,7 +191,7 @@ function socialtagsandcontant() {
             try {
 
                 if (social_location != null && social_location != '' && social_location.trim() != '') {
-                    $(".parlocation").html('<i class="ti-location-pin text-primary mr-2"></i>' + decodeURIComponent(social_location).replaceAll('+',' '));
+                    $(".parlocation").html('<i class="ti-location-pin mr-2"></i>' + decodeURIComponent(social_location).replaceAll('+',' '));
                     $(".parlocation").removeClass("d-none");
                 }
             } catch (error) {

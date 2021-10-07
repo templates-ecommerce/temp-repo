@@ -17,15 +17,19 @@
           {{ end }}
         
       </ul> 
-      © 2021, by <a href="https://turf.pk" class="text-color" style="font-weight: bold;" target="_blank">turf</a>
+      <span>© 2021, by</span> <a href="https://turf.pk" class="text-color" style="font-weight: bold;" target="_blank">turf</a>
     </div>
     </div>
   </div>
 </footer>
 
 <style>
+  /* .text-color{
+    color: black !important;
+  } */
   .text-color:hover{
-color: #5182c2;
+    font-weight: bold;
+    color: var(--font)!important;
   }
   .modal-dialog-full-width {
     width: 100% !important;
@@ -130,7 +134,7 @@ color: #5182c2;
               <div class="card-header bg-white text-light" style="background-color: white;">
                 <div class="row">
                   <div class="col-md-4 pt-2">
-                    <span style="color:#2c3b70;vertical-align: middle"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span style="color:var(--font);vertical-align: middle"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
                       Cart
                     </span>
                   </div>

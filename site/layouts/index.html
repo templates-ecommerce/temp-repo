@@ -4,7 +4,7 @@
 {{ if site.Data.homepage.banner.enable }}
 {{ with site.Data.homepage.banner }}
 
-<div id="slider_main_id" class="d-none">
+<div class="d-block">
 <!--Carousel Wrapper-->
 <div id="carousel-example-1z" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
     <!--Indicators-->
@@ -15,11 +15,12 @@
       <!--First slide-->
       <div id="sliders_items_imgs">
        
-        <!--/First slide-->
-        <!--Second slide-->
-        
-        <!--/Second slide-->
-        <!--Third slide-->
+        <div class="carousel-item active" id="slider_main_id">
+          <div class="d-block w-100 text-center " style="
+          padding-top: 150px;
+          height: 300px;
+      "><img src="/contact/Loading2.gif" /></div>
+      </div>
         
       </div>
       
@@ -98,7 +99,7 @@
       <div class="col-lg-4 col-sm-6 mb-4 pricesrangeclass" data-price="{{ .Params.Price }}">
         <div class="card border-0 text-center showhidefile">
           <div class="overlay">
-            <div class="text"><a href="{{ .Permalink }}" class="ahrefview" style="color: #f9fafa;">View More</a></div>
+            <div class="text"><a href="{{ .Permalink }}" class="ahrefview" style="color:white;">View More</a></div>
           </div>
           <a href="{{ .Permalink }}">
             
@@ -186,7 +187,7 @@ $("#pagin li").click(function() {
   .ahrefview{
     opacity:1;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--font);
     
     padding: 12px 35px;
     font-size: 15px;
@@ -195,7 +196,7 @@ $("#pagin li").click(function() {
   }
   .overlay {
     position: absolute;
-    background-color: #2c3b70;
+    background-color: var(--background);
     top: 0;
     left: 0;
   right: 0;

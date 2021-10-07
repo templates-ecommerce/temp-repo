@@ -9,13 +9,13 @@
       <div class="col-lg-5 col-sm-6">
         
         <h3 class="mb-4">About us</h3>
-        <p id="aboutdetails"></p>
+        <p id="aboutdetails" style="color: black;"></p>
       
 
-        <ul class="list-unstyled">
-          <li class="mb-3 mb-3 d-none parmobile"></li>
-          <li class="mb-3 d-none paremail"></li>
-          <li class="mb-3 d-none parlocation"></li>
+        <ul class="list-unstyled" style="color: black;">
+          <li class="mb-3 mb-3 d-none color-black parmobile" style="color: black;"></li>
+          <li class="mb-3 d-none color-black paremail" style="color: black;"></li>
+          <li class="mb-3 d-none color-black parlocation" style="color: black;"></li>
         </ul>
       </div>
       <!-- offset-lg-1 -->
@@ -37,7 +37,11 @@
     </div>
   </div>
 </section>
-
+<style>
+    .color-black a{
+    color: black !important;
+  }
+</style>
 <script src="/Controllers/contactController.js"></script>
 {{ end }}
 

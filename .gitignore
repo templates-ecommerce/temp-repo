@@ -1,4 +1,3 @@
 node_modules/
 dist/
 site/data/webpack.json
-site/static/javascript/config.js
