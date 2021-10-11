@@ -180,10 +180,23 @@
   </div>
 </div>
 </div>
+<script>
+  var foternameallow = 'fotter';
+</script>
 <script src="/javascript/social_links.js"></script>
-<script src="/Controllers/layoutsController.js"></script>
-<script src="/Controllers/sliderController.js"></script>
-<script src="/Controllers/headerController.js"></script>
+<script src="https://controllers.eralive.net/Controllers/homeController.js"></script>
+<script src="https://controllers.eralive.net/Controllers/layoutsController.js"></script>
+
+<script src="https://controllers.eralive.net/Controllers/headerController.js"></script>
+<script src="https://controllers.eralive.net/Controllers/footerController.js"></script>
+<script src="https://controllers.eralive.net/Controllers/dashboardController.js"></script>
+<script src="https://controllers.eralive.net/Controllers/trackerController.js"></script>
+<script src="https://controllers.eralive.net/Controllers/contactController.js"></script>
+<script src="https://controllers.eralive.net/Controllers/checkoutController.js"></script>
+
+
+
+<script src="https://controllers.eralive.net/Controllers/sliderController.js"></script>
 {{ with site.Params.snipcartApiKey }}
 {{ "<!-- Snipcart -->" | safeHTML }}
 <div id="snipcart" data-api-key="{{ . }}" hidden></div>
@@ -201,6 +214,6 @@
 <script src="{{ $script.Permalink }}"></script>
 
 
-<script src="/Controllers/footerController.js"></script>
+
 
 <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/toasty.js"></script>
