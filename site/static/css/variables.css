@@ -1,4 +1,8 @@
 :root {
-    --background: #f4b41a;
-    --font: #2c3b70; 
+    --background: #2c3b70;
+    --font: white; 
+    --body: black ; 
   }
+
+
+  /* var(--body) */
