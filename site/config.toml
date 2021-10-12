@@ -20,6 +20,8 @@ disqusShortname = ""
   link = "https://controllers.eralive.net/plugins/slick/slick.css"
   [[params.plugins.css]]
   link = "https://controllers.eralive.net/plugins/themify-icons/themify-icons.css"
+    [[params.plugins.css]]
+  link = "https://controllers.eralive.net/css/style.min.css"
   
 
   # JS Plugins
