@@ -119,7 +119,7 @@ var pagenames = "Home";
             
               <s>PKR <script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.PriceBefore }}')))</script></s>
               {{ end }}
-              <span class="rangeprice" hidden>{{ .Params.Price }}')))</span>
+              <span class="rangeprice" hidden>{{ .Params.Price }}</span>
               <span class="lead text-primary">PKR <span style="font-weight: 500;"><script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.Price }}')))</script></span></span>
             </div>
             <button class="btn btn-sm btn-outline-primary" id="modalActivate" data-item-id="{{ .Params.ProductID }}"
