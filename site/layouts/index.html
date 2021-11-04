@@ -2,160 +2,160 @@
 <script>
 var pagenames = "Home";
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://v1.eralive.net/assets/css/demo1.css" />
+<link href="css/style.min.css" rel="stylesheet" />
 <!-- banner -->
 {{ if site.Data.homepage.banner.enable }}
 {{ with site.Data.homepage.banner }}
-
-<div class="d-block">
-<!--Carousel Wrapper-->
-<div id="carousel-example-1z" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
-    <!--Indicators-->
-  
-    <!--/.Indicators-->
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-      <!--First slide-->
-      <div id="sliders_items_imgs">
-       
-        <div class="carousel-item active" id="slider_main_id">
-          <div class="d-block w-100 text-center " style="
-          padding-top: 150px;
-          height: 300px;
-      "><img src="/contact/Loading2.gif" /></div>
+    <!-- Main Slider Start -->
+    <div class="sticky-header-next-sec ec-main-slider section section-space-pb">
+      <div class="ec-slider swiper-container main-slider-nav main-slider-dot">
+          <!-- Main slider -->
+          <div class="swiper-wrapper" style="width: 100%;" id="sliders_items_imgs">
+            
+          </div>
+          <div class="swiper-pagination swiper-pagination-white"></div>
+          <div class="swiper-buttons">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
       </div>
-        
-      </div>
-      
-      <!--/Third slide-->
-    </div>
-    <!--/.Slides-->
-    <!--Controls-->
-    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
   </div>
-</div>
-  <!--/.Carousel Wrapper-->
+  <style>
+      .ec-slide-item{
+          height: auto !important;
+          width: 100% !important;
+      }
+      img{
+          width: 100%;
+      }
+  </style>
+  <!-- Main Slider End -->
 {{ end }}
 {{ end }}
 <!-- /banner -->
 
+
+    <!-- Ec Shop page -->
+    <section class="ec-page-content">
+      <div class="container">
+          <div class="row">
+              <div class="ec-shop-rightside col-lg-12 col-md-12">
+                  <!-- Shop Top Start -->
+                  <div class="ec-pro-list-top d-flex">
+                      <div class="col-md-6 ec-grid-list mobile-view-grid-hide">
+                          <div class="ec-gl-btn">
+                            
+                              <button class="btn btn-grid-50 grid active"><img src="https://v1.eralive.net/assets/images/icons/grid.svg"
+                                      class="svg_img gl_svg" id="grid" alt="grid" /></button>
+                              <button class="btn btn-list-50 "><img src="https://v1.eralive.net/assets/images/icons/list.svg"
+                                      class="svg_img gl_svg" id="list" alt="list" /></button>
+                          </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12 ec-sort-select sm-12-width">
+                          <span class="sort-by">Sort by</span>
+                          <div class="ec-select-inner sm-12-width">
+                              <select name="ec-select" id="pricerageallow" onchange="sort()">
+                                <option disabled selected>Select price range</option>
+                                <option value="byPrice">Select low to high</option>
+                                <option value="byDistance">Select high to low</option>
+                              </select>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Shop Top End -->
+                  {{ if site.Data.homepage.products.enable }}
+                  <!-- Shop content Start -->
+                  <div class="shop-pro-content">
+                      <div class="shop-pro-inner">
+                          <div class="row" id="search">
+                            {{ range (where site.RegularPages "Type" "products") }}
+                            
+                              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-6 col-5 pro-gl-content pricesrangeclass" data-price="{{ .Params.Price }}">
+                                  <div class="ec-product-inner">
+                                      <div class="ec-pro-image-outer">
+                                          <div class="ec-pro-image">
+                                              <div onclick="window.location.href = '{{ .Permalink }}';" style="cursor: pointer;">
+                                              <a href="{{ .Permalink }}" class="image">
+                                                {{ range first 1 .Params.Images }}
+                                                  <img class="main-image"
+                                                      src="{{ .image | absURL }}" alt="Product" style="height: 300px;"/>
+                                                      
+                                                      {{ end }}
+                                                      
+                                                      <!-- <img class="hover-image"
+                                                      src="" alt="Product" /> -->
+                                                    
+                                              </a>
+                                            
+                                            <span class="percentage" style="background-color: var(--background)!important;color: var(--font)!important;opacity: unset!important;cursor: unset;"><script>
+                                                var date = new Date({{ .Params.date }})
+                                                if(moment().diff(date,'days') < 4){
+                                                    document.write('new')
+                                                }
+                                            </script>   </span>
+                                        </div>
+                                              <a href="{{ .Permalink }}" class="quickview" title="View"><img
+                                                      src="https://v1.eralive.net/assets/images/icons/quickview.svg" class="svg_img pro_svg"
+                                                      alt="" /></a>
+                                              <div class="ec-pro-actions">
+                                                
+                                                  <a class="ec-btn-group wishlist" href="#a" title="Add To Cart" onclick="Check({{ .Params.ProductID }},{{ .Title }},{{ .Params.Description }},{{ .Params.Price }}
+                                                  ,{{ range first 1 .Params.Images }}{{ .image | absURL }}{{ end }},1)" title="PKR {{ .Params.Price }} "><img
+                                                          src="https://v1.eralive.net/assets/images/icons/cart.svg" class="svg_img pro_svg"
+                                                          alt="" /></button>
+                                                          <a class="ec-btn-group" href="#" id="whatsapp{{ .Params.ProductID }}" title="Whatsapp" onclick="whatsapp('{{ .Params.ProductID }}','{{ .Title }}')" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 20px;"></i></a>
+                                                
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="ec-pro-content" onclick="window.location.href = '{{ .Permalink }}';" style="cursor: pointer;">
+                                          <h5 class="ec-pro-title"><a href="{{ .Permalink }}"><script>document.write(decodeURIComponent('{{ .Title }}').replaceAll('+',' '))</script></a></h5>
+                                          <p><script>document.write(decodeURIComponent('{{ .Params.Category }}').replaceAll('+',' '))</script>
+                                          <div class="ec-pro-list-desc" style="margin:unset;"><script>document.write(decodeURIComponent('{{ .Params.shortDescription }}').replaceAll('+',' '))</script></div></p>
+                                          <span class="ec-price">
+                                            {{ if .Params.PriceBefore }}
+                                              <span class="old-price">PKR <script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.PriceBefore }}')))</script></span>
+                                            {{ end }}
+                                            <span class="rangeprice" hidden>{{ .Params.Price }}</span>
+                                              <span class="new-price">PKR <script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.Price }}')))</script></span>
+                                          </span>
+                                       
+                                      </div>
+                                  </div>
+                              </div>
+                              {{ end }}
+                          
+                          </div>
+                      </div>
+                      <!-- Ec Pagination Start -->
+                      <div class="ec-pro-pagination">
+                          <!-- <span>Showing 1-12 of 21 item(s)</span> -->
+                          <ul class="ec-pro-pagination-inner" id="pagin">
+
+                             <!-- <li><a class="next" href="#">Next <i class="ecicon eci-angle-right"></i></a></li> -->
+                           </ul>
+                      </div>
+                      <!-- Ec Pagination End -->
+                  </div>
+                  <!--Shop content End -->
+              </div>
+              <!-- Sidebar Area Start -->
+
+
+          </div>
+      </div>
+  </section>
+  <!-- End Shop page -->
+
+
+
+
+
 <!-- products -->
-{{ if site.Data.homepage.products.enable }}
-
-<section class="section pb-0">
-  <div class="container">
-    <div class="col-12 text-center mb-4">
-      <div class="row">
-        <div class="col-lg-9 col-sm-12 text-center mb-4">
-          <input id="myInput" type="text" name="search" placeholder="Search" class="hide form-control">
-        </div>
-        
-        <div class="col-lg-3 col-sm-12 text-center mb-4">
-        <select class="form-control" style="height: 100%;" id="pricerageallow" onchange="sort()">
-          <option disabled selected>Select price range</option>
-          <option value="byPrice">Select low to high</option>
-          <option value="byDistance">Select high to low</option>
-        </select>
-        </div>
-      </div>
-    </div>
-    <style>
-      #myInput[type=text] {
-        width: 10px;
-        box-sizing: border-box;
-
-        border-radius: 4px;
-        font-size: 16px;
-
-        background-image: url('/images/searchicon.png');
-        background-position: 10px 10px;
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
-      }
-
-      #myInput[type=text]:focus {
-        width: 100%;
-      }
-
-      @media screen and (max-width: 800px) {
-        #myInput[type=text] {
-        width: 100%;
-      }
-}
-
-    </style>
-    
- 
-    <div class="row" id="search">
-      
-      {{ range (where site.RegularPages "Type" "products") }}
-      <div class="col-lg-4 col-sm-6 mb-4 pricesrangeclass" data-price="{{ .Params.Price }}">
-        <div class="card border-0 text-center showhidefile">
-          <div class="overlay">
-            <div class="text"><a href="{{ .Permalink }}" class="ahrefview" style="color:white;">View More</a></div>
-          </div>
-          <a href="{{ .Permalink }}">
-            
-            {{ range first 1 .Params.Images }}
-            <img src="{{ .image | absURL }}" alt="{{ .Title }}" class="img-fluid mx-auto" style="height: 230px;">
-            {{ end }}
-              </a>
-          <div class="card-body">
-            <a href="{{ .Permalink }}" class="h4 "><div class="titlealign text-center" title=""><script>document.write(decodeURIComponent('{{ .Title }}').replaceAll('+',' '))</script></div></a>
-            <p><script>document.write(decodeURIComponent('{{ .Params.Category }}').replaceAll('+',' '))</script></p>
-            <div class="mb-4">
-              
-            {{ if .Params.PriceBefore }}
-            
-              <s>PKR <script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.PriceBefore }}')))</script></s>
-              {{ end }}
-              <span class="rangeprice" hidden>{{ .Params.Price }}</span>
-              <span class="lead text-primary">PKR <span style="font-weight: 500;"><script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.Price }}')))</script></span></span>
-            </div>
-            <button class="btn btn-sm btn-outline-primary" id="modalActivate" data-item-id="{{ .Params.ProductID }}"
-            data-item-name="{{ .Title }}" {{ range first 1 .Params.Images }} data-item-image="{{ .image | absURL }}"
-            {{ end }} data-item-price="{{ .Params.Price }}" id="add_to_cart" data-item-url="{{ .Permalink }}"
-            data-item-description="{{ .Description }}"
-            onclick="Check({{ .Params.ProductID }},{{ .Title }},{{ .Params.Description }},{{ .Params.Price }}
-            ,{{ range first 1 .Params.Images }}{{ .image | absURL }}{{ end }},1)" title="PKR {{ .Params.Price }} ">
-            Add to cart
-          </button>
-          <span class="whatsappallow d-none">
-            <a href="#" id="whatsapp{{ .Params.ProductID }}" onclick="whatsapp('{{ .Params.ProductID }}','{{ .Title }}')" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 20px;"></i></a>
-          
-          </span>
-          
-          </div>
-
-          
-        </div>
-      </div>
-      {{ end }}
-  
-    </div>
-    <div class="row">
-      <div class="col-12 text-center">
 
 
-<ul class="pagination" id="pagin">
-  <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
- 
-  <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
-</ul>
-      </div>
-    </div>
-  </div>
-</section>
 <script>
   	pageSize = 12;
 
@@ -163,9 +163,9 @@ var pageCount =  $(".pricesrangeclass").length / pageSize;
   
    for(var i = 0 ; i<pageCount;i++){
       
-     $("#pagin").append('<li class="page-item"><a class="page-link" href="#">'+(i+1)+'</a></li> ');
+     $("#pagin").append('<li><a href="#'+(i+1)+'">'+(i+1)+'</a></li>');
    }
-      $("#pagin li").first().addClass("active")
+      $("#pagin li a").first().addClass("active")
   showPage = function(page) {
     $(".pricesrangeclass").hide();
     $(".pricesrangeclass").each(function(n) {
@@ -176,11 +176,13 @@ var pageCount =  $(".pricesrangeclass").length / pageSize;
   
 showPage(1);
 
-$("#pagin li").click(function() {
-    $("#pagin li").removeClass("active");
+$("#pagin li a").click(function() {
+    $("#pagin li a").removeClass("active");
     $(this).addClass("active");
     showPage(parseInt($(this).text())) 
 });
+
+
 </script>
 
 

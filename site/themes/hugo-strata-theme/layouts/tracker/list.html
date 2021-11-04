@@ -21,25 +21,29 @@
             
         </div>
         <div class="col-lg-4 col-sm-6 mb-4">
-            <button class="btn btn-sm btn-outline-primary" onclick="track()">track</button>
+            <button class="btn btn-sm btn-secondary" id="trackbtndone" onclick="track()">track</button>
              
             
         </div>
     </div>
 
     <div class="table-responsive">
-        <table class="table" id="producttrack">
+        <table class="table" id="producttrack" style="white-space: nowrap;">
           <thead>
             <tr>
-              <th>Order id</th>
+              <th>Order date</th>
               <th>Total amount</th>
               <th>City</th>
               <th>Status</th>
-              <th>Order date</th>
               <th>Control</th>
             </tr>
           </thead>
             <tbody id="tabrownode">
+              <tr>
+                <td colspan="5" class="text-center"><img src="https://img.freepik.com/free-photo/empty-miniature-shopping-trolley-near-torn-paper-piece-against-colored-backdrop_23-2147943585.jpg" style="height: 150px;"/></td>
+            
+              </tr>
+              
             </tbody>
             <tbody id="hidetable" style="display: none;">
             

@@ -12,33 +12,73 @@ disqusShortname = ""
 
   # CSS Plugins
   [[params.plugins.css]]
-  link = "https://controllers.eralive.net/plugins/bootstrap/bootstrap.min.css"
+  link = "https://controllers.eralive.net/v1/assets/css/vendor/ecicons.min.css"
   [[params.plugins.css]]
   link = "css/variables.css"
 
   [[params.plugins.css]]
-  link = "https://controllers.eralive.net/plugins/slick/slick.css"
+  link = "https://controllers.eralive.net/v1/assets/css/plugins/animate.css"
   [[params.plugins.css]]
-  link = "https://controllers.eralive.net/plugins/themify-icons/themify-icons.css"
+  link = "https://controllers.eralive.net/v1/assets/css/plugins/swiper-bundle.min.css"
     [[params.plugins.css]]
-  link = "https://controllers.eralive.net/css/style.min.css"
+  link = "https://controllers.eralive.net/v1/assets/css/plugins/jquery-ui.min.css"
+    [[params.plugins.css]]
+  link = "https://controllers.eralive.net/v1/assets/css/plugins/countdownTimer.css"
+  [[params.plugins.css]]
+  link = "https://controllers.eralive.net/v1/assets/css/plugins/slick.min.css"
+    [[params.plugins.css]]
+  link = "https://controllers.eralive.net/v1/assets/css/plugins/bootstrap.css"
+
+      [[params.plugins.css]]
+  link = "https://controllers.eralive.net/v1/assets/css/style.css"
+
+  [[params.plugins.css]]
+  link = "https://controllers.eralive.net/v1/assets/css/responsive.css"
+    [[params.plugins.css]]
+  link = "https://controllers.eralive.net/v1/assets/css/backgrounds/bg-4.css"
   
 
   # JS Plugins
+
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/plugins/jQuery/jquery.min.js"
+  link = "https://controllers.eralive.net/v1/assets/js/vendor/popper.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/plugins/bootstrap/bootstrap.min.js"
+  link = "https://controllers.eralive.net/v1/assets/js/vendor/bootstrap.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/plugins/slick/slick.min.js"
+  link = "https://controllers.eralive.net/v1/assets/js/vendor/jquery-migrate-3.3.0.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/plugins/google-map/gmap.js"
+  link = "https://controllers.eralive.net/v1/assets/js/vendor/modernizr-3.11.2.min.js"
+
+
+    [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/plugins/swiper-bundle.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/plugins/jQuery/crypto-js.min.js"
+  link = "https://controllers.eralive.net/v1/assets/js/plugins/countdownTimer.min.js"
+  [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/plugins/scrollup.js"
+  [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/plugins/jquery.zoom.min.js"
+  [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/plugins/slick.min.js"
+  
+      [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/plugins/infiniteslidev2.js"
+  [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/vendor/jquery.magnific-popup.min.js"
+  [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/plugins/jquery.sticky-sidebar.js"
+  [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/vendor/index.js"
+  [[params.plugins.js]]
+  link = "https://controllers.eralive.net/v1/assets/js/main.js"
+
+
+
+
     [[params.plugins.js]]
   link = "javascript/config.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/routes/web.js"
+  link = "https://controllers.eralive.net/v1/routes/web.js"
 
 
 
@@ -80,7 +120,6 @@ disqusShortname = ""
 
 #################### default parameters ################################
 [params]
-
 logo = "images/logo.png"
 invoice = "images/invoice.png"
 home = "Home"
@@ -117,34 +156,36 @@ currencySymbol = "$"
 
   # Social Site
   [[params.social]]
-  icon = "ti-facebook"
+  icon = "eci-facebook"
   link = "#"
   id= "facebook"
   itemid= "itemfb"
 
   [[params.social]]
-  icon = "ti-twitter-alt"
+  icon = "eci-twitter"
   link = "#"
   id= "twitter"
   itemid= "itemtw"
 
   [[params.social]]
-  icon = "ti-youtube"
+  icon = "eci-youtube"
   link = "#"
   id= "youtube"
   itemid= "itemyt"
 
   [[params.social]]
-  icon = "ti-instagram"
+  icon = "eci-instagram"
   link = "#"
   id= "instagram"
   itemid= "iteminta"
   
   [[params.social]]
-  icon = "ti-pinterest"
+  icon = "eci-pinterest"
   link = "#"
   id= "pinterest"
   itemid= "itempt"
+
+
 
   # Contact Form
   [params.contact]
