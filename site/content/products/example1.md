@@ -1,17 +1,17 @@
 ---
-title: 'dfsf ds fsdfsd f'
+title: 'example1'
 date: 2019-10-17T11:22:16+06:00
 draft: false
 # meta description 
-description: ''
-var: 1
+description: 'example3'
 # product Price
 price: '23.0'
+metatag: ''
 # Product Short Description
-shortDescription: 'hi da s dkas dk as kms kdfmss kms dk'
-productID: 'C16B608C-6132-EC11-995F-005056B3A416'
+shortDescription: ''
+productID: 'example1'
 type: 'products'
-category: 'gddfgfgdf' 
+category: "example3" 
 thumnailproduct: 'images/products/1.jpg' 
 images:
   - image: 'images/products/1.jpg'  

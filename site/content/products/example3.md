@@ -1,18 +1,19 @@
 ---
-title: 'adasd'
-date: 2021-11-03
+title: 'example3'
+date: '2021-11-03'
 draft: false
 # meta description 
-description: ''
-var: 1
+description: 'example3'
+
 # product Price
 price: '23.0'
+metatag: ''
 # Product Short Description
 shortDescription: ''
-productID: 'C16B608C-6132-EC11-995F-005056B3A416'
+productID: 'example3'
 type: 'products'
-category: 'aasd' 
-thumnailproduct: 'images/products/1.jpg' 
+category: "example3" 
+thumnailproduct: 'images/products/3.jpg' 
 images:
   - image: 'images/products/1.jpg'  
 ---
