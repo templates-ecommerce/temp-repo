@@ -19,10 +19,12 @@
                               <div class="single-pro-img single-pro-img-no-sidebar">
                                   <div class="single-product-scroll">
                                     <span class="ec-360-lbl" data-link-action="quickview" style="height:20px;color: var(--font)!important;opacity: unset!important;cursor: unset;border-radius: 0 15px 15px 0;background-color: var(--background)!important;font-weight: 700;">
-                                       
-                                       
-                                            
-                                        new
+                                        <script>
+                                            var date = new Date({{ .Params.date }})
+                                            if(moment().diff(date,'days') < 4){
+                                                document.write('new')
+                                            }
+                                        </script> 
                                     </span>
                                       <div class="single-product-cover">
                                         {{ range .Params.Images }}
