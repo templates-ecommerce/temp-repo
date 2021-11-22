@@ -66,7 +66,7 @@
               </div>
               
               <div class="ec-nav-panel-icons">
-                  <a data-toggle="tooltip" title="My account" href="#" onclick="account()" class="ec-header-btn"><img src="https://v1.eralive.net/assets/images/icons/user.svg"
+                  <a data-toggle="tooltip" title="My account" id="mobileviewaccount" href="/register" class="ec-header-btn"><img src="https://v1.eralive.net/assets/images/icons/user.svg"
                           class="svg_img header_svg" alt="icon" /></a>
               </div>
 
@@ -134,7 +134,7 @@
             </div>
             <div class="cart_btn">
                 <a href="/cart" class="btn btn-secondary">View Cart</a>
-                <a href="javascript:;" onclick="checkoutbtc();" class="btn btn-secondary">Checkout</a>
+                <a href="javascript:void(0);" onclick="checkoutbtc();" class="btn btn-secondary btncheckdis">Checkout</a>
             </div>
         </div>
     </div>
@@ -145,6 +145,30 @@
         display: none!important;
     }
 </style>
+
+<!-- Modal -->
+<div class="modal fade" id="Logoutallow" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle" style="font-size: 16px;"><b>Logged in</b></h5>
+          <button type="button" class="btn-close qty_close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <br>
+            <div style="text-align: center;"><p class="infoText">Logged in as <br>
+                <span class="infoTextEmail"><b><span id="loggedname">Guest</span></b></span>
+            </p>
+            <br>
+                <button type="button"class="btn btn-secondary btn-block" onclick="LogoutUser()">Log out</button>
+        </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  
 </body>
 
 <script>
@@ -158,6 +182,7 @@
 
 <script src="https://controllers.eralive.net/v1/Controllers/headerController.js"></script>
 <script src="https://controllers.eralive.net/v1/Controllers/footerController.js"></script>
+<script src="https://controllers.eralive.net/v1/Controllers/verify.js"></script>
 <script src="https://controllers.eralive.net/v1/Controllers/dashboardController.js"></script>
 <script src="https://controllers.eralive.net/v1/Controllers/trackerController.js"></script>
 <script src="https://controllers.eralive.net/v1/Controllers/contactController.js"></script>
@@ -177,7 +202,8 @@
 <script src="https://controllers.eralive.net/plugins/jQuery/crypto-js.min.js"></script>
 <script src="https://controllers.eralive.net/js/script.min.js"></script>
 
-
+<script src="https://controllers.eralive.net/v1/Controllers/accountController.js"></script>
 
 
 <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/toasty.js"></script>
+

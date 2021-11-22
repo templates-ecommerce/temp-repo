@@ -8,7 +8,8 @@
                   <!-- checkout content Start -->
                   <div class="ec-checkout-content">
                       <div class="ec-checkout-inner">
-            
+                          <span id="alert-set-cart"></span>
+                       
                           <div class="ec-checkout-wrap margin-bottom-30 padding-bottom-3">
                               <div class="ec-checkout-block ec-check-bill">
                                   <h3 class="ec-checkout-title">Billing Details</h3>
@@ -22,14 +23,14 @@
                                                       <p id="errorname" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
                                               </span>
                                               <span class="ec-bill-wrap ec-bill-half">
-                                                  <label>Email</label>
+                                                  <label>Email*</label>
                                                   <input type="text" name="email" id="emai" 
-                                                      placeholder="Enter your email" disabled required />
+                                                      placeholder="Enter your email" required onkeyup="emailvalidcheck()" />
                                                       <p id="erroremail" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
                                               </span>
                                               <span class="ec-bill-wrap ec-bill-half">
                                                   <label>Phone*</label>
-                                                  <input type="text" name="Phone" placeholder="+92" required id="phone" onkeyup="phonevalidcheck()"/>
+                                                  <input type="text" name="Phone" placeholder="Enter your phone number" required id="phone" maxlength="14" onkeyup="phonevalidcheck()"/>
                                                   <p id="errorphone" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
                                               </span>
                                               <span class="ec-bill-wrap ec-bill-half">

@@ -1,0 +1,63 @@
+{{ define "main" }}
+<script>
+    var pagenames = "account";
+</script>
+    <!-- Start Register -->
+    <section class="ec-page-content section-space-p">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2 class="ec-bg-title">Register</h2>
+                        <h2 class="ec-title">Register</h2>
+                        <!-- <p class="sub-title mb-3">Best place to buy and sell digital products</p> -->
+                    </div>
+                </div>
+                <div class="ec-register-wrapper">
+                    <div class="ec-register-container">
+                        <div class="ec-register-form">
+                            <form action="#" method="post">
+                                <span class="ec-register-wrap ec-register-half">
+                                    <label>Full Name*</label>
+                                    <input type="text" name="fullname" id="r_fullname" placeholder="Enter your full name" required />
+                                    <p id="e_fullname" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
+                                </span>
+                                
+                                <span class="ec-register-wrap ec-register-half">
+                                    <label>Email*</label>
+                                    <input type="email"name="email" id="r_email" placeholder="Enter your email" required onkeyup="emailvalidcheck()"/>
+                                    <p id="e_email" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
+                                </span>
+                                <span class="ec-register-wrap ec-register-half">
+                                    <label>Phone*</label>
+                                    <input type="text" name="phone" max="14" id="r_phone" maxlength="14" onkeyup="phonevalidcheck()" placeholder="Enter your phone number"
+                                        required />
+                                        <p id="e_phone" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
+                                </span>
+                                <span class="ec-register-wrap ec-register-half">
+                                    <label>Password*</label>
+                                    <input type="password" name="password" id="r_password" placeholder="Enter your password"
+                                        required />
+                                        <p id="e_password" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
+                                </span>
+                              
+                                <span class="ec-register-wrap ec-register-btn">
+                                    <button class="btn btn-primary" type="button" onclick="validate()">Register</button>
+                                    <hr>
+                                    <label class="btn" style="cursor: unset;">OR</label>
+                                    <div class="row">
+                                        <div class="col-md-4 text-center"><button class="btn btn-primary" type="button" onclick="fbLogin()"><i class="fa fa-facebook-official" aria-hidden="true"></i> &nbsp; Continue with Facebook</button></div>
+                                        <div class="col-md-4 text-center"><button class="btn btn-primary" type="button" onclick="GoogleLogin()"><i class="fa fa-google" aria-hidden="true"></i> &nbsp; Continue with Google</button></div>
+                                        <div class="col-md-4 text-center"><button class="btn btn-primary" type="button" onclick="guLogin()"><i class="fa fa-user-circle-o" aria-hidden="true"></i> &nbsp; Continue with Guest</button></div>
+                                    </div>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Register -->
+    <script src="https://controllers.eralive.net/v1/Controllers/registerController.js"></script>
+{{ end }}

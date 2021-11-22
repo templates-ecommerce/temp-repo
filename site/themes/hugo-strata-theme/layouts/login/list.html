@@ -1,0 +1,54 @@
+{{ define "main" }}
+<script>
+    var pagenames = "account";
+</script>
+    <!-- Start Login -->
+    <section class="ec-page-content section-space-p">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-title">
+                        <h2 class="ec-bg-title">Login</h2>
+                        <h2 class="ec-title">Login</h2>
+                        <!-- <p class="sub-title mb-3">Best place to buy and sell digital products</p> -->
+                    </div>
+                </div>
+                <div class="ec-register-wrapper">
+                    <div class="ec-register-container">
+                        <div class="ec-register-form">
+                            <form action="#" method="post">
+                               
+                                
+                                <span class="ec-register-wrap ec-register-half">
+                                    <label>Email*</label>
+                                    <input type="email" name="email" id="l_email" placeholder="Enter your email add..." required />
+                                    <p id="e_email" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
+                                </span>
+                                <span class="ec-register-wrap ec-register-half">
+                                    <label>Password*</label>
+                                    <input type="password" name="password" id="l_password" placeholder="Enter your password"
+                                        required />
+                                        <p id="e_password" style="margin-top: -18px;color: red;margin-bottom: 15px;"></p>
+                                </span>
+                              
+                              
+                                <span class="ec-register-wrap ec-register-btn">
+                                    <button class="btn btn-primary" type="button" onclick="validate()">Login</button>
+                                    <hr>
+                                    <label class="btn" style="cursor: unset;">OR</label>
+                                    <div class="row">
+                                        <div class="col-md-4 text-center"><button class="btn btn-primary" type="button" onclick="fbLogin()"><i class="fa fa-facebook-official" aria-hidden="true"></i> &nbsp; Continue with Facebook</button></div>
+                                        <div class="col-md-4 text-center"><button class="btn btn-primary" type="button" onclick="GoogleLogin()"><i class="fa fa-google" aria-hidden="true"></i> &nbsp; Continue with Google</button></div>
+                                        <div class="col-md-4 text-center"><button class="btn btn-primary" type="button" onclick="guLogin()"><i class="fa fa-user-circle-o" aria-hidden="true"></i> &nbsp; Continue with Guest</button></div>
+                                    </div>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Login -->
+    <script src="https://controllers.eralive.net/v1/Controllers/loginController.js"></script>
+{{ end }}

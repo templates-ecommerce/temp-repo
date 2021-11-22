@@ -125,6 +125,7 @@ invoice = "images/invoice.png"
 home = "Home"
 # Meta data
 description = "This is meta description"
+category = ""
 author = "Themefisher"
 # google map
 gmapAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"

@@ -1,3 +1,32 @@
+
+  @media only screen and (max-width: 575px)
+  {
+    .header-logo img {
+        width: 130px !important;
+      }
+      #responsivelogo {
+        margin-right: 25%;
+    }
+    #responsicecustom{margin-bottom: -19px;}
+  }
+
+  .modal-sm {
+    max-width: 400px !important;
+}
+.modal-dialog .modal-header{
+    justify-content: center!important;
+    border-bottom: 2px solid black!important;
+}
+.modal-content{
+    padding: 20px!important;
+}
+.btn-close{
+    width: 10px!important;
+}
+  .ec-header-bottom {
+    padding: 8px 0 !important;
+  }
+
 .ec-header{
     background-color: var(--background)!important;
     color: var(--font)!important;
@@ -286,4 +315,30 @@ width: 100%;
 }
 .svg_img.pro_svg{
     fill:var(--body)!important;
+}
+
+.noUi-horizontal .noUi-handle{
+    width:16px!important;
+    height:16px!important;
+}
+
+.noUi-horizontal{
+    height: 4px!important;
+}
+.filter__label:nth-child(1):before{
+    content:"PKR"!important;
+}
+.filter__label:nth-child(3):before{
+    content:"PKR"!important;
+}
+.ec-register-wrapper .ec-register-container .ec-register-form .btn{
+    width: unset;
+}
+
+.ec-register-wrapper .ec-register-container .ec-register-form .btn{
+    font-size: 15px!important;
+}
+
+.single-nav-thumb .slick-slide.slick-current.slick-active img{
+    border-color: var(--body)!important;
 }

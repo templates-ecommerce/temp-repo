@@ -14,4 +14,4 @@ var about_info = decodeURIComponent("At brand, we draw our inspirations from the
 
 var company_name="Eralive";
 
-var tagmanager = "GTM-MHJK6NC";
+var tagmaneger = "GTM-MHJK6NC";
