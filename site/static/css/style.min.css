@@ -2,7 +2,8 @@
   @media only screen and (max-width: 575px)
   {
     .header-logo img {
-        width: 130px !important;
+        width: 90px !important;
+        margin-left: -70px;
       }
       #responsivelogo {
         margin-right: 25%;
@@ -16,6 +17,9 @@
 .modal-dialog .modal-header{
     justify-content: center!important;
     border-bottom: 2px solid black!important;
+}
+.header-logo img{
+    width: unset !important;
 }
 .modal-content{
     padding: 20px!important;
