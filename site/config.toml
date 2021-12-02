@@ -12,65 +12,65 @@ disqusShortname = ""
 
   # CSS Plugins
   [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/vendor/ecicons.min.css"
+  link = "https://v1.eralive.net/assets/css/vendor/ecicons.min.css"
   [[params.plugins.css]]
   link = "css/variables.css"
 
   [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/plugins/animate.css"
+  link = "https://v1.eralive.net/assets/css/plugins/animate.css"
   [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/plugins/swiper-bundle.min.css"
+  link = "https://v1.eralive.net/assets/css/plugins/swiper-bundle.min.css"
     [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/plugins/jquery-ui.min.css"
+  link = "https://v1.eralive.net/assets/css/plugins/jquery-ui.min.css"
     [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/plugins/countdownTimer.css"
+  link = "https://v1.eralive.net/assets/css/plugins/countdownTimer.css"
   [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/plugins/slick.min.css"
+  link = "https://v1.eralive.net/assets/css/plugins/slick.min.css"
     [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/plugins/bootstrap.css"
+  link = "https://v1.eralive.net/assets/css/plugins/bootstrap.css"
 
       [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/style.css"
+  link = "https://v1.eralive.net/assets/css/style.css"
 
   [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/responsive.css"
+  link = "https://v1.eralive.net/assets/css/responsive.css"
     [[params.plugins.css]]
-  link = "https://controllers.eralive.net/v1/assets/css/backgrounds/bg-4.css"
+  link = "https://v1.eralive.net/assets/css/backgrounds/bg-4.css"
   
 
   # JS Plugins
 
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/vendor/popper.min.js"
+  link = "https://v1.eralive.net/assets/js/vendor/popper.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/vendor/bootstrap.min.js"
+  link = "https://v1.eralive.net/assets/js/vendor/bootstrap.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/vendor/jquery-migrate-3.3.0.min.js"
+  link = "https://v1.eralive.net/assets/js/vendor/jquery-migrate-3.3.0.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/vendor/modernizr-3.11.2.min.js"
+  link = "https://v1.eralive.net/assets/js/vendor/modernizr-3.11.2.min.js"
 
 
     [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/plugins/swiper-bundle.min.js"
+  link = "https://v1.eralive.net/assets/js/plugins/swiper-bundle.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/plugins/countdownTimer.min.js"
+  link = "https://v1.eralive.net/assets/js/plugins/countdownTimer.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/plugins/scrollup.js"
+  link = "https://v1.eralive.net/assets/js/plugins/scrollup.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/plugins/jquery.zoom.min.js"
+  link = "https://v1.eralive.net/assets/js/plugins/jquery.zoom.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/plugins/slick.min.js"
+  link = "https://v1.eralive.net/assets/js/plugins/slick.min.js"
   
       [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/plugins/infiniteslidev2.js"
+  link = "https://v1.eralive.net/assets/js/plugins/infiniteslidev2.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/vendor/jquery.magnific-popup.min.js"
+  link = "https://v1.eralive.net/assets/js/vendor/jquery.magnific-popup.min.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/plugins/jquery.sticky-sidebar.js"
+  link = "https://v1.eralive.net/assets/js/plugins/jquery.sticky-sidebar.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/vendor/index.js"
+  link = "https://v1.eralive.net/assets/js/vendor/index.js"
   [[params.plugins.js]]
-  link = "https://controllers.eralive.net/v1/assets/js/main.js"
+  link = "https://v1.eralive.net/assets/js/main.js"
 
 
 

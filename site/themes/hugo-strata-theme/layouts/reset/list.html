@@ -1,9 +1,10 @@
 {{ define "main" }}
 <script>
     var pagenames = "account";
-    var accountname = "loginallow";
 </script>
-<!-- Start Login -->
+
+
+    <!-- Start Login -->
 <section class="ec-page-content section-space-p">
     <div class="container">
         <div class="row">
@@ -30,7 +31,7 @@
                                 <div class="row">
                                     <div class="mx-auto col-lg-9 col-md-11 col-11">
                                         <center>
-                                            <h5>Login Your Account <br></h5>
+                                            <h5>Reset password <br></h5>
                                         </center>
                                         <span class="ec-register-wrap ec-register-half">
                                             <!-- <label>Email*</label> -->
@@ -39,11 +40,10 @@
                                                     style="background-color: transparent;border: none;border-bottom:1px solid"
                                                     id="emailallow"><i class="fa fa-envelope-o"
                                                         aria-hidden="true"></i></span>
-                                                <input type="email" name="email" id="l_email"
-                                                    placeholder="Enter your email" required
+                                                <input type="email" disabled name="email" id="l_email" placeholder="Enter your email" required
                                                     aria-describedby="emailallow" />
-                                                <p id="e_email"
-                                                    style="color: red;"></p>
+                                                    <p id="e_email" style="color: red;"></p>
+                                               
                                             </div>
                                         </span>
                                         <span class="ec-register-wrap ec-register-half">
@@ -53,16 +53,15 @@
                                                     style="background-color: transparent;border: none;border-bottom:1px solid"
                                                     id="passwordsallow"><i class="fa fa-unlock-alt"
                                                         aria-hidden="true"></i></span>
-                                                <input type="password" name="password" id="l_password"
-                                                    placeholder="Enter your password" required aria-describedby="passwordsallow"/>
-                                                <p id="e_password"
-                                                    style="color: red"></p>
+                                                <input type="password" name="password" id="l_password" placeholder="Enter your password"
+                                                required aria-describedby="passwordsallow"/>
+                                                <p id="e_password" style="color: red"></p>
+                                                
                                             </div>
                                         </span>
                                         <span class="ec-register-wrap ec-register-half" id="bottom-desktop-30">
-                                            
-                                            <a href="/forgot">Forgot Password</a>
-                                            <button class="btn btn-outline-primary" id="btn-center-desktop" type="button" onclick="validate()">Login</button>
+         
+                                            <button class="btn btn-outline-primary" id="btn-center-desktop" type="button" onclick="validate1()">Reset password</button>
                                            
                                             </span>
                                     </div>
@@ -77,5 +76,6 @@
     </div>
 </section>
 <!-- End Login -->
-<script src="https://controllers.eralive.net/v1/Controllers/loginController.js"></script>
+    <script src="https://controllers.eralive.net/v1/Controllers/forgetController.js"></script>
+    <script src="https://controllers.eralive.net/v1/Controllers/loginController.js"></script>
 {{ end }}

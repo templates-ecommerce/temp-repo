@@ -15,3 +15,6 @@ var about_info = decodeURIComponent("At brand, we draw our inspirations from the
 var company_name="Eralive";
 
 var tagmaneger = "GTM-MHJK6NC";
+
+var Receipt_Header = '%3bNTN+123456;ahmed170f@gmail.com;udam das tara 14 chand road karachi garden west'; 
+var Receipt_Footer= ';No Refund;No Exchange';

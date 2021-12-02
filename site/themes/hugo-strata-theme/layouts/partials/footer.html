@@ -9,13 +9,9 @@
                       <!-- Footer social Start -->
                       <div class="col text-left footer-bottom-left">
                           <div class="footer-bottom-social">
-                              <span class="social-text text-upper">Follow us on:</span>
-                              <ul class="mb-0">
-                                {{ range site.Params.social }}
-
-                                  <li class="list-inline-item d-none" id="{{ .itemid }}"><a class="hdr-facebook" href="{{ .link | safeURL }}" id="{{ .id }}"  target="_blank"><i class="ecicon {{ .icon }}"></i></a></li>
-                                {{ end }}
-                                </ul>
+                            <li class="list-inline-item d-none parmobile"></li>
+                            <li class="list-inline-item d-none paremail"></li>
+                              
                           </div>
                       </div>
                       <!-- Footer social End -->
@@ -31,8 +27,12 @@
                       <div class="col footer-bottom-right">
                           <div class="footer-bottom-payment d-flex justify-content-end">
                               <div class="payment-link">
-                                <li class="list-inline-item d-none parmobile"></li>
-                                <li class="list-inline-item d-none paremail"></li>
+                                <ul class="mb-0">
+                                    {{ range site.Params.social }}
+    
+                                      <li class="list-inline-item d-none" id="{{ .itemid }}"><a class="hdr-facebook" href="{{ .link | safeURL }}" id="{{ .id }}"  target="_blank"><i class="ecicon {{ .icon }}"></i></a></li>
+                                    {{ end }}
+                                    </ul>
                                   <!-- <a class="text-color pr-2" href="tel:923315425425"><i class="ecicon eci-phone"><span class=" ml-1">923315425425</span></i></a> -->
                                   <!-- <a class="text-color" href="mailto:exampleuser436@gmail.com"><i class="ecicon eci-envelope"><span class=" ml-1">exampleuser436@gmail.com</span></i></a> -->
                               </div>
@@ -119,6 +119,7 @@
                 </li> -->
              
             </ul>
+            <img src="https://controllers.eralive.net/images/Add-To-Cart.png" id="imgaddtocartremove" alt="">
         </div>
         <div class="ec-cart-bottom">
             <div class="cart-sub-total">
