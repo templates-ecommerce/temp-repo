@@ -1,6 +1,23 @@
 {{ define "main" }}
 <script>
 var pagenames = "Home";
+var productids= null;
+var setsizeprice= null;
+function myFunctionmedia(xmedia) {
+  if (xmedia.matches) { // If media query matches
+    $('.ec-sb-block-content').css("display", "none");
+  } else {
+   $('.ec-sb-block-content').css("display", "block");
+  }
+}
+    
+    var xmedia = window.matchMedia("(max-width: 500px)")
+myFunctionmedia(xmedia)
+    xmedia.addListener(myFunctionmedia)
+  
+$( document ).ready(function() {
+    myFunctionmedia(xmedia);
+});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="https://v1.eralive.net/assets/css/demo1.css" />
@@ -73,7 +90,7 @@ var pagenames = "Home";
                       <div class="shop-pro-inner">
                           <div class="row" id="search">
                             {{ range (where site.RegularPages "Type" "products") }}
-                            <div class="col-lg-3 col-md-3 col-sm-3 pricesrangeclass" data-category="{{ .Params.Category }}" data-price="{{ .Params.Price }}">
+                            <div class="col-lg-3 col-md-3 col-sm-3 pricesrangeclass" style="margin-bottom: 20px;" data-category="{{ .Params.Category }}" data-price="{{ .Params.Price }}">
                                 <!-- START single card -->
                                 <div class="ec-product-lsc">
                                     <div class="ec-product-image">
@@ -93,24 +110,56 @@ var pagenames = "Home";
                                         <p class="ec-description">Category <span><script>document.write(decodeURIComponent('{{ .Params.Category }}').replaceAll('+',' '))</script></span></p>
                                         <h3 class="ec-title"><a href="{{ .Permalink }}"><script>document.write(decodeURIComponent('{{ .Title }}').replaceAll('+',' '))</script></a></h3>
                                         <div class="ec-el-price">
-                                            <p class="ec-o-price">PKR <script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.Price }}')))</script></p>
-                                            {{ if .Params.PriceBefore }}
-                                            <p class="ec-d-price" id="oldpricehide"><span style="visibility: hidden;">&nbsp;&nbsp;&nbsp;&nbsp;</span>PKR <script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.PriceBefore }}')))</script> </p>
-                                            {{ end }}
-                                            <p style="text-decoration:line-through" id="oldpriceipad">
+                                            
+                                            <p class="ec-o-price">PKR <span id="{{ .Params.ProductID }}"><script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.Price }}')))</script></span></p>
+                                            
+                                            <p style="text-decoration:line-through">
                                                 {{ if .Params.PriceBefore }}
-                                                PKR <script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.PriceBefore }}')))</script>
+                                                PKR <span id="{{ .Params.ProductID }}{{ .Params.ProductID }}"><script>document.write(new Intl.NumberFormat().format(parseFloat('{{ .Params.PriceBefore }}')))</script></span>
+                                                {{else}}
+                                                <br>
                                                 {{ end }}
                                             </p>
                                         </div>
                                         <span class="rangeprice" hidden>{{ .Params.Price }}</span>
+                                        {{ if .Params.Variants }}
+                                        <br>
+
+                                        <div class="ec-pro-option">
+                                           
+                                            <div class="ec-pro-size">
+                                                <span>Size</span>
+                                                <ul class="ec-opt-size" data-productidsold="{{ .Params.ProductID }}">
+                                                   
+                                                    {{ range .Params.Variants }}
+                                                    <li onmouseover="changePrice(this,'{{ .variant.RetailPrice}}','{{ .variant.priceBefore}}')" data-Sizevariant="{{ .variant.Size}}" data-ProductVariantID="{{ .variant.ProductVariantID}}" data-retailprice="{{ .variant.RetailPrice}}"><a href="#" class="ec-opt-sz">{{ .variant.Size }}</a></li>
+                                                    {{ end }}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        {{else}}
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        {{ end }}
+                                        <span class="rangeprice" hidden>{{ .Params.Price }}</span>
                                         <div class="ec-link-btn">
+
+                                            {{ if .Params.Variants }}
+                                            <a class=" ec-add-to-cart" href="#a" title="Add To Cart" onclick="tempFunction(this,{{ .Title }},{{ .Params.Description }}
+                                            ,{{ range first 1 .Params.Images }}{{ .image | absURL }}{{ end }},1,'{{ .Params.ProductID }}');" title="PKR {{ .Params.Price }} "><i class="fa fa-cart-plus" aria-hidden="true"></i> <span id="cartipda">cart</span></a>
+                                            {{else}}
                                             <a class=" ec-add-to-cart" href="#a" title="Add To Cart" onclick="Check({{ .Params.ProductID }},{{ .Title }},{{ .Params.Description }},{{ .Params.Price }}
-                                            ,{{ range first 1 .Params.Images }}{{ .image | absURL }}{{ end }},1)" title="PKR {{ .Params.Price }} "><i class="fa fa-cart-plus" aria-hidden="true"></i> <span id="cartipda">cart</span></a>
+                                            ,{{ range first 1 .Params.Images }}{{ .image | absURL }}{{ end }},1,'{{ .Params.ProductID }}',''),''" title="PKR {{ .Params.Price }} "><i class="fa fa-cart-plus" aria-hidden="true"></i> <span id="cartipda">cart</span></a>
+                               
+                                            {{ end }}
+                                            
                                             <div class="ec-link-icon">
                                                 <a href="{{ .Permalink }}"><img src="https://v1.eralive.net/assets/images/icons/quickview.svg"
                                                     class="svg_img header_svg pro_svg" alt="wishlist" /></a>
-                                                <a id="whatsapp{{ .Params.ProductID }}" title="Whatsapp" onclick="whatsapp('{{ .Params.ProductID }}','{{ .Title }}')" target="_blank" data-tip="Compare"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 20px;"></i></a>
+                                                <a id="whatsapp{{ .Params.ProductID }}" class="whatsappcheck" title="Whatsapp" onclick="whatsapp('{{ .Params.ProductID }}','{{ .Title }}')" target="_blank" data-tip="Compare"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 20px;"></i></a>
                                                 
                                             </div>
                                         </div>
@@ -270,5 +319,6 @@ var pagenames = "Home";
 </style>
 
 <script src="https://v1.eralive.net/assets/js/plugins/nouislider.js"></script>
+<script src="https://controllers.eralive.net/v1/Controllers/sizeController.js"></script>
 <br>
 {{ end }}
