@@ -78,7 +78,7 @@ disqusShortname = ""
     [[params.plugins.js]]
   link = "javascript/config.js"
   [[params.plugins.js]]
-  link = ""https://controllers.eralive.net/v1/routes/web.js"
+  link = "https://controllers.eralive.net/v1/routes/web.js"
 
 
 
