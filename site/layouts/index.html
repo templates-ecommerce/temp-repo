@@ -104,6 +104,10 @@ $( document ).ready(function() {
                                             if(moment().diff(date,'days') < 4){
                                                 document.write('<span class="ec-product-ribbon">new</span>')
                                             }
+                                            if('{{ .Params.featured }}' == 'true')
+                                            {
+                                                document.write('<span class="ec-product-ribbon">Featured</span>')
+                                            }
                                         </script>
                                     </div>
                                     <div class="ec-product-body">
@@ -317,7 +321,9 @@ $( document ).ready(function() {
 
 
 </style>
-
+<script>
+    setInterval(function () {checkbox()}, 1000);
+</script>
 <script src="https://v1.eralive.net/assets/js/plugins/nouislider.js"></script>
 <script src="https://controllers.eralive.net/v1/Controllers/sizeController.js"></script>
 <br>
